@@ -1,0 +1,668 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C286394B2D804E15001D13C2 /* VideoStreamerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639482D804E15001D13C2 /* VideoStreamerApp.swift */; };
+		C286394C2D804E15001D13C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28639442D804E15001D13C2 /* Preview Assets.xcassets */; };
+		C286394D2D804E15001D13C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28639462D804E15001D13C2 /* Assets.xcassets */; };
+		C28639512D804E7D001D13C2 /* VideoStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639502D804E74001D13C2 /* VideoStreamer.swift */; };
+		C28639562D8064DB001D13C2 /* VideoCapturerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639552D8064CB001D13C2 /* VideoCapturerView.swift */; };
+		C28639582D806565001D13C2 /* VideoCapturerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639572D80655F001D13C2 /* VideoCapturerViewModel.swift */; };
+		C286395C2D806917001D13C2 /* VideoPreviewViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286395B2D8068CE001D13C2 /* VideoPreviewViewRepresentable.swift */; };
+		C286395E2D8081A7001D13C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286395D2D8081A2001D13C2 /* ContentView.swift */; };
+		C28639632D8083DD001D13C2 /* WebRTC in Frameworks */ = {isa = PBXBuildFile; productRef = C28639622D8083DD001D13C2 /* WebRTC */; };
+		C28639652D80895E001D13C2 /* VideoReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639642D808958001D13C2 /* VideoReceiver.swift */; };
+		C28639682D808C60001D13C2 /* VideoReceiverViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639672D808C57001D13C2 /* VideoReceiverViewRepresentable.swift */; };
+		C286396A2D808CC5001D13C2 /* VideoReceiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639692D808CC0001D13C2 /* VideoReceiverView.swift */; };
+		C286396C2D808CCE001D13C2 /* VideoReceiverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286396B2D808CC8001D13C2 /* VideoReceiverViewModel.swift */; };
+		C28639712D80932E001D13C2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639702D809327001D13C2 /* HomeView.swift */; };
+		C28639762D80949C001D13C2 /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639752D809495001D13C2 /* WebSocketClient.swift */; };
+		C28639782D819E76001D13C2 /* ServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639772D819E6F001D13C2 /* ServerView.swift */; };
+		C286397C2D81A0A5001D13C2 /* ServerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286397B2D81A09F001D13C2 /* ServerViewModel.swift */; };
+		C286397E2D81AEDD001D13C2 /* HttpServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286397D2D81AED5001D13C2 /* HttpServer.swift */; };
+		C28639882D81B0D4001D13C2 /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = C28639872D81B0D4001D13C2 /* NIO */; };
+		C286398A2D81B0D4001D13C2 /* NIOConcurrencyHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = C28639892D81B0D4001D13C2 /* NIOConcurrencyHelpers */; };
+		C286398C2D81B0D4001D13C2 /* NIOCore in Frameworks */ = {isa = PBXBuildFile; productRef = C286398B2D81B0D4001D13C2 /* NIOCore */; };
+		C286398E2D81B0D4001D13C2 /* NIOEmbedded in Frameworks */ = {isa = PBXBuildFile; productRef = C286398D2D81B0D4001D13C2 /* NIOEmbedded */; };
+		C28639902D81B0D4001D13C2 /* NIOFoundationCompat in Frameworks */ = {isa = PBXBuildFile; productRef = C286398F2D81B0D4001D13C2 /* NIOFoundationCompat */; };
+		C28639922D81B0D4001D13C2 /* NIOHTTP1 in Frameworks */ = {isa = PBXBuildFile; productRef = C28639912D81B0D4001D13C2 /* NIOHTTP1 */; };
+		C28639942D81B0D4001D13C2 /* NIOPosix in Frameworks */ = {isa = PBXBuildFile; productRef = C28639932D81B0D4001D13C2 /* NIOPosix */; };
+		C28639962D81B0D4001D13C2 /* NIOTLS in Frameworks */ = {isa = PBXBuildFile; productRef = C28639952D81B0D4001D13C2 /* NIOTLS */; };
+		C28639982D81B0D4001D13C2 /* NIOTestUtils in Frameworks */ = {isa = PBXBuildFile; productRef = C28639972D81B0D4001D13C2 /* NIOTestUtils */; };
+		C286399A2D81B0D4001D13C2 /* NIOWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = C28639992D81B0D4001D13C2 /* NIOWebSocket */; };
+		C286399C2D81B0D4001D13C2 /* _NIOConcurrency in Frameworks */ = {isa = PBXBuildFile; productRef = C286399B2D81B0D4001D13C2 /* _NIOConcurrency */; };
+		C286399E2D81B0D4001D13C2 /* _NIOFileSystem in Frameworks */ = {isa = PBXBuildFile; productRef = C286399D2D81B0D4001D13C2 /* _NIOFileSystem */; };
+		C28639A02D81B0D4001D13C2 /* _NIOFileSystemFoundationCompat in Frameworks */ = {isa = PBXBuildFile; productRef = C286399F2D81B0D4001D13C2 /* _NIOFileSystemFoundationCompat */; };
+		C28639A52D81E476001D13C2 /* ClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639A42D81E476001D13C2 /* ClientView.swift */; };
+		C28639A62D81E476001D13C2 /* ClientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639A32D81E476001D13C2 /* ClientViewModel.swift */; };
+		C2ADD52F2D883D5F005614D4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ADD52E2D883D5B005614D4 /* Constants.swift */; };
+		C2ADD6952D82F486007992A5 /* HttpExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ADD6942D82F480007992A5 /* HttpExplorer.swift */; };
+		C2FEC0CB2D8481500064C5B6 /* WebSocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FEC0CA2D84814A0064C5B6 /* WebSocketServer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C28639262D804CAC001D13C2 /* Video Streamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Video Streamer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C28639442D804E15001D13C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C28639462D804E15001D13C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C28639482D804E15001D13C2 /* VideoStreamerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamerApp.swift; sourceTree = "<group>"; };
+		C28639502D804E74001D13C2 /* VideoStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamer.swift; sourceTree = "<group>"; };
+		C28639552D8064CB001D13C2 /* VideoCapturerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapturerView.swift; sourceTree = "<group>"; };
+		C28639572D80655F001D13C2 /* VideoCapturerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapturerViewModel.swift; sourceTree = "<group>"; };
+		C286395B2D8068CE001D13C2 /* VideoPreviewViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewViewRepresentable.swift; sourceTree = "<group>"; };
+		C286395D2D8081A2001D13C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C28639642D808958001D13C2 /* VideoReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReceiver.swift; sourceTree = "<group>"; };
+		C28639672D808C57001D13C2 /* VideoReceiverViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReceiverViewRepresentable.swift; sourceTree = "<group>"; };
+		C28639692D808CC0001D13C2 /* VideoReceiverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReceiverView.swift; sourceTree = "<group>"; };
+		C286396B2D808CC8001D13C2 /* VideoReceiverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReceiverViewModel.swift; sourceTree = "<group>"; };
+		C28639702D809327001D13C2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C28639752D809495001D13C2 /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
+		C28639772D819E6F001D13C2 /* ServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerView.swift; sourceTree = "<group>"; };
+		C286397B2D81A09F001D13C2 /* ServerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerViewModel.swift; sourceTree = "<group>"; };
+		C286397D2D81AED5001D13C2 /* HttpServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpServer.swift; sourceTree = "<group>"; };
+		C28639A32D81E476001D13C2 /* ClientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewModel.swift; sourceTree = "<group>"; };
+		C28639A42D81E476001D13C2 /* ClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientView.swift; sourceTree = "<group>"; };
+		C290FDE52D8420AD0080732C /* Video-Streamer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Video-Streamer-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C2ADD52E2D883D5B005614D4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C2ADD6942D82F480007992A5 /* HttpExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpExplorer.swift; sourceTree = "<group>"; };
+		C2FEC0CA2D84814A0064C5B6 /* WebSocketServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketServer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C28639232D804CAC001D13C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C286398A2D81B0D4001D13C2 /* NIOConcurrencyHelpers in Frameworks */,
+				C28639942D81B0D4001D13C2 /* NIOPosix in Frameworks */,
+				C28639632D8083DD001D13C2 /* WebRTC in Frameworks */,
+				C286399C2D81B0D4001D13C2 /* _NIOConcurrency in Frameworks */,
+				C286398C2D81B0D4001D13C2 /* NIOCore in Frameworks */,
+				C28639922D81B0D4001D13C2 /* NIOHTTP1 in Frameworks */,
+				C28639982D81B0D4001D13C2 /* NIOTestUtils in Frameworks */,
+				C28639962D81B0D4001D13C2 /* NIOTLS in Frameworks */,
+				C286399E2D81B0D4001D13C2 /* _NIOFileSystem in Frameworks */,
+				C28639882D81B0D4001D13C2 /* NIO in Frameworks */,
+				C28639902D81B0D4001D13C2 /* NIOFoundationCompat in Frameworks */,
+				C28639A02D81B0D4001D13C2 /* _NIOFileSystemFoundationCompat in Frameworks */,
+				C286399A2D81B0D4001D13C2 /* NIOWebSocket in Frameworks */,
+				C286398E2D81B0D4001D13C2 /* NIOEmbedded in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C286391D2D804CAC001D13C2 = {
+			isa = PBXGroup;
+			children = (
+				C28639492D804E15001D13C2 /* Video Streamer */,
+				C28639272D804CAC001D13C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C28639272D804CAC001D13C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C28639262D804CAC001D13C2 /* Video Streamer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C28639412D804E15001D13C2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C286395D2D8081A2001D13C2 /* ContentView.swift */,
+				C28639482D804E15001D13C2 /* VideoStreamerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C28639422D804E15001D13C2 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C286396D2D8092FA001D13C2 /* Home */,
+				C286396F2D80930F001D13C2 /* Server */,
+				C286396E2D809306001D13C2 /* Client */,
+				C28639662D808969001D13C2 /* VideoReceiver */,
+				C28639542D8064C4001D13C2 /* VideoCapturer */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		C28639432D804E15001D13C2 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C28639412D804E15001D13C2 /* App */,
+				C28639422D804E15001D13C2 /* Screens */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C28639452D804E15001D13C2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C28639442D804E15001D13C2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C28639492D804E15001D13C2 /* Video Streamer */ = {
+			isa = PBXGroup;
+			children = (
+				C290FDE52D8420AD0080732C /* Video-Streamer-Info.plist */,
+				C28639462D804E15001D13C2 /* Assets.xcassets */,
+				C28639452D804E15001D13C2 /* Preview Content */,
+				C286394E2D804E2E001D13C2 /* Core */,
+				C28639432D804E15001D13C2 /* Presentation */,
+			);
+			path = "Video Streamer";
+			sourceTree = "<group>";
+		};
+		C286394E2D804E2E001D13C2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C2ADD52D2D883D4F005614D4 /* Constants */,
+				C2FEC0C92D8481300064C5B6 /* Legacy */,
+				C286394F2D804E34001D13C2 /* Utils */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C286394F2D804E34001D13C2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C2ADD6942D82F480007992A5 /* HttpExplorer.swift */,
+				C286397D2D81AED5001D13C2 /* HttpServer.swift */,
+				C28639502D804E74001D13C2 /* VideoStreamer.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C28639542D8064C4001D13C2 /* VideoCapturer */ = {
+			isa = PBXGroup;
+			children = (
+				C286395B2D8068CE001D13C2 /* VideoPreviewViewRepresentable.swift */,
+				C28639572D80655F001D13C2 /* VideoCapturerViewModel.swift */,
+				C28639552D8064CB001D13C2 /* VideoCapturerView.swift */,
+			);
+			path = VideoCapturer;
+			sourceTree = "<group>";
+		};
+		C28639662D808969001D13C2 /* VideoReceiver */ = {
+			isa = PBXGroup;
+			children = (
+				C286396B2D808CC8001D13C2 /* VideoReceiverViewModel.swift */,
+				C28639692D808CC0001D13C2 /* VideoReceiverView.swift */,
+				C28639672D808C57001D13C2 /* VideoReceiverViewRepresentable.swift */,
+			);
+			path = VideoReceiver;
+			sourceTree = "<group>";
+		};
+		C286396D2D8092FA001D13C2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C28639702D809327001D13C2 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C286396E2D809306001D13C2 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				C28639A32D81E476001D13C2 /* ClientViewModel.swift */,
+				C28639A42D81E476001D13C2 /* ClientView.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		C286396F2D80930F001D13C2 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				C286397B2D81A09F001D13C2 /* ServerViewModel.swift */,
+				C28639772D819E6F001D13C2 /* ServerView.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		C2ADD52D2D883D4F005614D4 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C2ADD52E2D883D5B005614D4 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		C2FEC0C92D8481300064C5B6 /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				C2FEC0CA2D84814A0064C5B6 /* WebSocketServer.swift */,
+				C28639752D809495001D13C2 /* WebSocketClient.swift */,
+				C28639642D808958001D13C2 /* VideoReceiver.swift */,
+			);
+			path = Legacy;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C28639252D804CAC001D13C2 /* Video Streamer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C28639342D804CAE001D13C2 /* Build configuration list for PBXNativeTarget "Video Streamer" */;
+			buildPhases = (
+				C28639222D804CAC001D13C2 /* Sources */,
+				C28639232D804CAC001D13C2 /* Frameworks */,
+				C28639242D804CAC001D13C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Video Streamer";
+			packageProductDependencies = (
+				C28639622D8083DD001D13C2 /* WebRTC */,
+				C28639872D81B0D4001D13C2 /* NIO */,
+				C28639892D81B0D4001D13C2 /* NIOConcurrencyHelpers */,
+				C286398B2D81B0D4001D13C2 /* NIOCore */,
+				C286398D2D81B0D4001D13C2 /* NIOEmbedded */,
+				C286398F2D81B0D4001D13C2 /* NIOFoundationCompat */,
+				C28639912D81B0D4001D13C2 /* NIOHTTP1 */,
+				C28639932D81B0D4001D13C2 /* NIOPosix */,
+				C28639952D81B0D4001D13C2 /* NIOTLS */,
+				C28639972D81B0D4001D13C2 /* NIOTestUtils */,
+				C28639992D81B0D4001D13C2 /* NIOWebSocket */,
+				C286399B2D81B0D4001D13C2 /* _NIOConcurrency */,
+				C286399D2D81B0D4001D13C2 /* _NIOFileSystem */,
+				C286399F2D81B0D4001D13C2 /* _NIOFileSystemFoundationCompat */,
+			);
+			productName = "Video Streamer";
+			productReference = C28639262D804CAC001D13C2 /* Video Streamer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C286391E2D804CAC001D13C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					C28639252D804CAC001D13C2 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+				};
+			};
+			buildConfigurationList = C28639212D804CAC001D13C2 /* Build configuration list for PBXProject "Video Streamer" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C286391D2D804CAC001D13C2;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C28639612D8083DD001D13C2 /* XCRemoteSwiftPackageReference "WebRTC" */,
+				C28639862D81B0D4001D13C2 /* XCRemoteSwiftPackageReference "swift-nio" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C28639272D804CAC001D13C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C28639252D804CAC001D13C2 /* Video Streamer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C28639242D804CAC001D13C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C286394C2D804E15001D13C2 /* Preview Assets.xcassets in Resources */,
+				C286394D2D804E15001D13C2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C28639222D804CAC001D13C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C286396A2D808CC5001D13C2 /* VideoReceiverView.swift in Sources */,
+				C286397E2D81AEDD001D13C2 /* HttpServer.swift in Sources */,
+				C2ADD6952D82F486007992A5 /* HttpExplorer.swift in Sources */,
+				C286395C2D806917001D13C2 /* VideoPreviewViewRepresentable.swift in Sources */,
+				C28639512D804E7D001D13C2 /* VideoStreamer.swift in Sources */,
+				C28639A52D81E476001D13C2 /* ClientView.swift in Sources */,
+				C28639A62D81E476001D13C2 /* ClientViewModel.swift in Sources */,
+				C286396C2D808CCE001D13C2 /* VideoReceiverViewModel.swift in Sources */,
+				C28639682D808C60001D13C2 /* VideoReceiverViewRepresentable.swift in Sources */,
+				C28639712D80932E001D13C2 /* HomeView.swift in Sources */,
+				C2FEC0CB2D8481500064C5B6 /* WebSocketServer.swift in Sources */,
+				C286397C2D81A0A5001D13C2 /* ServerViewModel.swift in Sources */,
+				C286395E2D8081A7001D13C2 /* ContentView.swift in Sources */,
+				C28639782D819E76001D13C2 /* ServerView.swift in Sources */,
+				C28639562D8064DB001D13C2 /* VideoCapturerView.swift in Sources */,
+				C2ADD52F2D883D5F005614D4 /* Constants.swift in Sources */,
+				C28639762D80949C001D13C2 /* WebSocketClient.swift in Sources */,
+				C28639652D80895E001D13C2 /* VideoReceiver.swift in Sources */,
+				C286394B2D804E15001D13C2 /* VideoStreamerApp.swift in Sources */,
+				C28639582D806565001D13C2 /* VideoCapturerViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C28639322D804CAE001D13C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C28639332D804CAE001D13C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C28639352D804CAE001D13C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Video Streamer/Preview Content\"";
+				DEVELOPMENT_TEAM = KJN22WKDDC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Video-Streamer-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs camera permission to work.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Esta aplicación necesita acceso a la red local para detectar dispositivos.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "miguelife.Video-Streamer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C28639362D804CAE001D13C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Video Streamer/Preview Content\"";
+				DEVELOPMENT_TEAM = KJN22WKDDC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Video-Streamer-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs camera permission to work.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Esta aplicación necesita acceso a la red local para detectar dispositivos.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "miguelife.Video-Streamer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C28639212D804CAC001D13C2 /* Build configuration list for PBXProject "Video Streamer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C28639322D804CAE001D13C2 /* Debug */,
+				C28639332D804CAE001D13C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C28639342D804CAE001D13C2 /* Build configuration list for PBXNativeTarget "Video Streamer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C28639352D804CAE001D13C2 /* Debug */,
+				C28639362D804CAE001D13C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C28639612D8083DD001D13C2 /* XCRemoteSwiftPackageReference "WebRTC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stasel/WebRTC.git";
+			requirement = {
+				branch = latest;
+				kind = branch;
+			};
+		};
+		C28639862D81B0D4001D13C2 /* XCRemoteSwiftPackageReference "swift-nio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.81.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C28639622D8083DD001D13C2 /* WebRTC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28639612D8083DD001D13C2 /* XCRemoteSwiftPackageReference "WebRTC" */;
+			productName = WebRTC;
+		};
+		C28639872D81B0D4001D13C2 /* NIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28639862D81B0D4001D13C2 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIO;
+		};
+		C28639892D81B0D4001D13C2 /* NIOConcurrencyHelpers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28639862D81B0D4001D13C2 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOConcurrencyHelpers;
+		};
+		C286398B2D81B0D4001D13C2 /* NIOCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28639862D81B0D4001D13C2 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOCore;
+		};
+		C286398D2D81B0D4001D13C2 /* NIOEmbedded */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28639862D81B0D4001D13C2 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOEmbedded;
+		};
+		C286398F2D81B0D4001D13C2 /* NIOFoundationCompat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28639862D81B0D4001D13C2 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOFoundationCompat;
+		};
+		C28639912D81B0D4001D13C2 /* NIOHTTP1 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28639862D81B0D4001D13C2 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOHTTP1;
+		};
+		C28639932D81B0D4001D13C2 /* NIOPosix */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28639862D81B0D4001D13C2 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOPosix;
+		};
+		C28639952D81B0D4001D13C2 /* NIOTLS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28639862D81B0D4001D13C2 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOTLS;
+		};
+		C28639972D81B0D4001D13C2 /* NIOTestUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28639862D81B0D4001D13C2 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOTestUtils;
+		};
+		C28639992D81B0D4001D13C2 /* NIOWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28639862D81B0D4001D13C2 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOWebSocket;
+		};
+		C286399B2D81B0D4001D13C2 /* _NIOConcurrency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28639862D81B0D4001D13C2 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = _NIOConcurrency;
+		};
+		C286399D2D81B0D4001D13C2 /* _NIOFileSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28639862D81B0D4001D13C2 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = _NIOFileSystem;
+		};
+		C286399F2D81B0D4001D13C2 /* _NIOFileSystemFoundationCompat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C28639862D81B0D4001D13C2 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = _NIOFileSystemFoundationCompat;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C286391E2D804CAC001D13C2 /* Project object */;
+}
