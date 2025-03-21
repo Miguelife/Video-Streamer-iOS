@@ -7,6 +7,7 @@ class HTTPServer {
     private var listener: NWListener?
     private var service: NetService?
     private var port: UInt16
+    var didReceiveConnection: (([URLQueryItem]) -> Void)?
 
     init(port: UInt16) {
         self.port = port
@@ -39,9 +40,10 @@ class HTTPServer {
         }
     }
 
-        func handleNewConnection(_ connection: NWConnection) {
-            connection.start(queue: .main)
-        }
+    func handleNewConnection(_ connection: NWConnection) {
+        connection.start(queue: .main)
+        receiveRequest(connection)
+    }
 
     func stop() {
         listener?.cancel()
@@ -53,31 +55,35 @@ class HTTPServer {
         service?.publish()
         print("Servicio Bonjour publicado en: \(serviceType) con puerto: \(port)")
     }
+
+    func receiveRequest(_ connection: NWConnection) {
+        connection.receive(minimumIncompleteLength: 1, maximumLength: 1024) { [weak self] data, _, _, _ in
+            guard let self, let data else { return }
+
+            if let requestString = String(data: data, encoding: .utf8),
+               let firstLine = requestString.components(separatedBy: "\r\n").first,
+               let urlComponents = firstLine.components(separatedBy: " ").dropFirst().first,
+               let queryItems = URLComponents(string: urlComponents)?.queryItems
+            {
+                didReceiveConnection?(queryItems)
+
+                let httpResponse = """
+                HTTP/1.1 200 OK\r
+                Content-Type: text/plain\r
+                Content-Length: 11\r
+                \r
+                hello world
+                """
+
+                let responseData = httpResponse.data(using: .utf8)!
+                connection.send(content: responseData, completion: .contentProcessed { _ in
+                    connection.cancel()
+                })
+
+                return
+            }
+
+            connection.cancel()
+        }
+    }
 }
-
-
-//
-//    func receiveRequest(_ connection: NWConnection) {
-//        connection.receive(minimumIncompleteLength: 1, maximumLength: 1024) { data, _, isComplete, error in
-//            if let data = data, let request = String(data: data, encoding: .utf8) {
-//                print("Solicitud recibida:\n\(request)")
-//
-//                // Construir una respuesta HTTP válida
-//                let response =
-//                    "HTTP/1.1 200 OK\r\n" +
-//                    "Content-Type: text/plain\r\n" +
-//                    "Content-Length: 17\r\n" +
-//                    "\r\n" +
-//                    "¡Hola, cliente!\n"
-//
-//                let responseData = response.data(using: .utf8)!
-//                connection.send(content: responseData, completion: .contentProcessed { _ in
-//                    connection.cancel()
-//                })
-//            }
-//
-//            if isComplete || error != nil {
-//                connection.cancel()
-//            }
-//        }
-//    }

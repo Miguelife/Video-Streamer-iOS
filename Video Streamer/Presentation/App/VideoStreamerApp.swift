@@ -11,8 +11,7 @@ import SwiftUI
 struct VideoStreamerApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
-                .preferredColorScheme(.light)
+            ContentView()
         }
     }
 }

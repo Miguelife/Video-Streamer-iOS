@@ -27,7 +27,7 @@ struct HomeView: View {
 
             // MARK: - NAVIGATION
             .navigationDestination(for: NetService.self, destination: { service in
-                // TODO: - Navigate to service
+                VideoReceiverBuilder().build(for: service)
             })
             .navigationDestination(for: String.self) { destination in
                 switch destination {

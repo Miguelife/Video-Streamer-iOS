@@ -14,7 +14,7 @@ struct ClientView: View {
     // MARK: - BODY
     var body: some View {
         makeBody()
-            .navigationTitle("📩 RECEIVER")
+            .navigationTitle("📩 Client")
             // MARK: - Life cycle
             .onAppear {
                 viewModel.exploreNetwork()
@@ -42,22 +42,22 @@ struct ClientView: View {
     func successView() -> some View {
         List {
             ForEach(viewModel.services, id: \.self) { service in
-                NavigationLink(value: service) {
-                    serviceTile(service)
-                }
+                serviceTile(service)
             }
         }
     }
 
     @ViewBuilder
     func serviceTile(_ service: NetService) -> some View {
-        let subtitle = (service.hostName ?? "") + ":" +  "\(service.port)"
+        let subtitle = (service.hostName ?? "") + ":" + "\(service.port)"
 
-        VStack(alignment: .leading, spacing: 0) {
-            Text(service.name)
-                .bold()
-            Text(subtitle)
-                .font(.subheadline)
+        NavigationLink(value: service) {
+            VStack(alignment: .leading, spacing: 0) {
+                Text(service.name)
+                    .bold()
+                Text(subtitle)
+                    .font(.subheadline)
+            }
         }
     }
 }

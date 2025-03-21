@@ -13,17 +13,61 @@ struct ServerView: View {
 
     // MARK: - BODY
     var body: some View {
-        VStack(spacing: 16) {
+        buildByStatus()
+            .navigationTitle("📦 SERVER")
+            // MARK: - Life cycle
+            .onAppear {
+                viewModel.onAppear()
+            }
+            .onDisappear {
+                viewModel.stopServer()
+            }
+    }
+
+    @ViewBuilder
+    func buildByStatus() -> some View {
+        switch viewModel.status {
+        case .success:
+            successBody()
+        case .inProgress:
+            loadingBody()
+        case .failure:
+            failureBody()
+        }
+    }
+
+    @ViewBuilder
+    func successBody() -> some View {
+        ZStack(alignment: .bottom) {
+            VideoPreviewViewRepresentable(captureSession: viewModel.captureSession)
+                .ignoresSafeArea(edges: [.horizontal, .bottom])
+
+            serverRunningLabel()
+        }
+    }
+
+    @ViewBuilder
+    func serverRunningLabel() -> some View {
+        HStack(spacing: 16) {
             ProgressView()
             Text("Server running...")
         }
-        .navigationTitle("📦 SENDER")
-        // MARK: - Life cycle
-        .onAppear {
-            viewModel.startServer()
+        .padding(.all, 16)
+        .background(.ultraThinMaterial)
+        .clipShape(RoundedRectangle(cornerRadius: 24))
+        .shadow(color: .black.opacity(0.25), radius: 8)
+    }
+
+    @ViewBuilder
+    func loadingBody() -> some View {
+        VStack(spacing: 16) {
+            ProgressView()
+            Text("Loading...")
         }
-        .onDisappear {
-            viewModel.stopServer()
-        }
+    }
+
+    @ViewBuilder
+    func failureBody() -> some View {
+        Text("Something went wrong. Try again.")
     }
 }

@@ -10,8 +10,8 @@ import SwiftUI
 struct ContentView: View {
     // MARK: - BODY
     var body: some View {
-        VideoCapturerView()
+        HomeView()
             .statusBarHidden()
+            .preferredColorScheme(.light)
     }
 }
-

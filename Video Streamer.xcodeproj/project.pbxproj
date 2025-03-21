@@ -11,13 +11,10 @@
 		C286394C2D804E15001D13C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28639442D804E15001D13C2 /* Preview Assets.xcassets */; };
 		C286394D2D804E15001D13C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28639462D804E15001D13C2 /* Assets.xcassets */; };
 		C28639512D804E7D001D13C2 /* VideoStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639502D804E74001D13C2 /* VideoStreamer.swift */; };
-		C28639562D8064DB001D13C2 /* VideoCapturerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639552D8064CB001D13C2 /* VideoCapturerView.swift */; };
-		C28639582D806565001D13C2 /* VideoCapturerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639572D80655F001D13C2 /* VideoCapturerViewModel.swift */; };
 		C286395C2D806917001D13C2 /* VideoPreviewViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286395B2D8068CE001D13C2 /* VideoPreviewViewRepresentable.swift */; };
 		C286395E2D8081A7001D13C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286395D2D8081A2001D13C2 /* ContentView.swift */; };
 		C28639632D8083DD001D13C2 /* WebRTC in Frameworks */ = {isa = PBXBuildFile; productRef = C28639622D8083DD001D13C2 /* WebRTC */; };
-		C28639652D80895E001D13C2 /* VideoReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639642D808958001D13C2 /* VideoReceiver.swift */; };
-		C28639682D808C60001D13C2 /* VideoReceiverViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639672D808C57001D13C2 /* VideoReceiverViewRepresentable.swift */; };
+		C28639682D808C60001D13C2 /* VideoViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639672D808C57001D13C2 /* VideoViewRepresentable.swift */; };
 		C286396A2D808CC5001D13C2 /* VideoReceiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639692D808CC0001D13C2 /* VideoReceiverView.swift */; };
 		C286396C2D808CCE001D13C2 /* VideoReceiverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286396B2D808CC8001D13C2 /* VideoReceiverViewModel.swift */; };
 		C28639712D80932E001D13C2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639702D809327001D13C2 /* HomeView.swift */; };
@@ -42,6 +39,8 @@
 		C28639A62D81E476001D13C2 /* ClientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639A32D81E476001D13C2 /* ClientViewModel.swift */; };
 		C2ADD52F2D883D5F005614D4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ADD52E2D883D5B005614D4 /* Constants.swift */; };
 		C2ADD6952D82F486007992A5 /* HttpExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ADD6942D82F480007992A5 /* HttpExplorer.swift */; };
+		C2F70E8D2D8DAD670092C85C /* VideoReceiverBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F70E8C2D8DAD610092C85C /* VideoReceiverBuilder.swift */; };
+		C2FADF132D88636C008A9D9C /* VideoReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FADF122D886363008A9D9C /* VideoReceiver.swift */; };
 		C2FEC0CB2D8481500064C5B6 /* WebSocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FEC0CA2D84814A0064C5B6 /* WebSocketServer.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,12 +50,9 @@
 		C28639462D804E15001D13C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C28639482D804E15001D13C2 /* VideoStreamerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamerApp.swift; sourceTree = "<group>"; };
 		C28639502D804E74001D13C2 /* VideoStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamer.swift; sourceTree = "<group>"; };
-		C28639552D8064CB001D13C2 /* VideoCapturerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapturerView.swift; sourceTree = "<group>"; };
-		C28639572D80655F001D13C2 /* VideoCapturerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapturerViewModel.swift; sourceTree = "<group>"; };
 		C286395B2D8068CE001D13C2 /* VideoPreviewViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewViewRepresentable.swift; sourceTree = "<group>"; };
 		C286395D2D8081A2001D13C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C28639642D808958001D13C2 /* VideoReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReceiver.swift; sourceTree = "<group>"; };
-		C28639672D808C57001D13C2 /* VideoReceiverViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReceiverViewRepresentable.swift; sourceTree = "<group>"; };
+		C28639672D808C57001D13C2 /* VideoViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewRepresentable.swift; sourceTree = "<group>"; };
 		C28639692D808CC0001D13C2 /* VideoReceiverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReceiverView.swift; sourceTree = "<group>"; };
 		C286396B2D808CC8001D13C2 /* VideoReceiverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReceiverViewModel.swift; sourceTree = "<group>"; };
 		C28639702D809327001D13C2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -69,6 +65,8 @@
 		C290FDE52D8420AD0080732C /* Video-Streamer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Video-Streamer-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C2ADD52E2D883D5B005614D4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C2ADD6942D82F480007992A5 /* HttpExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpExplorer.swift; sourceTree = "<group>"; };
+		C2F70E8C2D8DAD610092C85C /* VideoReceiverBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReceiverBuilder.swift; sourceTree = "<group>"; };
+		C2FADF122D886363008A9D9C /* VideoReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReceiver.swift; sourceTree = "<group>"; };
 		C2FEC0CA2D84814A0064C5B6 /* WebSocketServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,7 +127,6 @@
 				C286396F2D80930F001D13C2 /* Server */,
 				C286396E2D809306001D13C2 /* Client */,
 				C28639662D808969001D13C2 /* VideoReceiver */,
-				C28639542D8064C4001D13C2 /* VideoCapturer */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -178,27 +175,19 @@
 			children = (
 				C2ADD6942D82F480007992A5 /* HttpExplorer.swift */,
 				C286397D2D81AED5001D13C2 /* HttpServer.swift */,
+				C2FADF122D886363008A9D9C /* VideoReceiver.swift */,
 				C28639502D804E74001D13C2 /* VideoStreamer.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		C28639542D8064C4001D13C2 /* VideoCapturer */ = {
-			isa = PBXGroup;
-			children = (
-				C286395B2D8068CE001D13C2 /* VideoPreviewViewRepresentable.swift */,
-				C28639572D80655F001D13C2 /* VideoCapturerViewModel.swift */,
-				C28639552D8064CB001D13C2 /* VideoCapturerView.swift */,
-			);
-			path = VideoCapturer;
-			sourceTree = "<group>";
-		};
 		C28639662D808969001D13C2 /* VideoReceiver */ = {
 			isa = PBXGroup;
 			children = (
+				C2F70E8C2D8DAD610092C85C /* VideoReceiverBuilder.swift */,
 				C286396B2D808CC8001D13C2 /* VideoReceiverViewModel.swift */,
 				C28639692D808CC0001D13C2 /* VideoReceiverView.swift */,
-				C28639672D808C57001D13C2 /* VideoReceiverViewRepresentable.swift */,
+				C28639672D808C57001D13C2 /* VideoViewRepresentable.swift */,
 			);
 			path = VideoReceiver;
 			sourceTree = "<group>";
@@ -223,6 +212,7 @@
 		C286396F2D80930F001D13C2 /* Server */ = {
 			isa = PBXGroup;
 			children = (
+				C286395B2D8068CE001D13C2 /* VideoPreviewViewRepresentable.swift */,
 				C286397B2D81A09F001D13C2 /* ServerViewModel.swift */,
 				C28639772D819E6F001D13C2 /* ServerView.swift */,
 			);
@@ -242,7 +232,6 @@
 			children = (
 				C2FEC0CA2D84814A0064C5B6 /* WebSocketServer.swift */,
 				C28639752D809495001D13C2 /* WebSocketClient.swift */,
-				C28639642D808958001D13C2 /* VideoReceiver.swift */,
 			);
 			path = Legacy;
 			sourceTree = "<group>";
@@ -341,23 +330,22 @@
 				C286396A2D808CC5001D13C2 /* VideoReceiverView.swift in Sources */,
 				C286397E2D81AEDD001D13C2 /* HttpServer.swift in Sources */,
 				C2ADD6952D82F486007992A5 /* HttpExplorer.swift in Sources */,
+				C2FADF132D88636C008A9D9C /* VideoReceiver.swift in Sources */,
+				C2F70E8D2D8DAD670092C85C /* VideoReceiverBuilder.swift in Sources */,
 				C286395C2D806917001D13C2 /* VideoPreviewViewRepresentable.swift in Sources */,
 				C28639512D804E7D001D13C2 /* VideoStreamer.swift in Sources */,
 				C28639A52D81E476001D13C2 /* ClientView.swift in Sources */,
 				C28639A62D81E476001D13C2 /* ClientViewModel.swift in Sources */,
 				C286396C2D808CCE001D13C2 /* VideoReceiverViewModel.swift in Sources */,
-				C28639682D808C60001D13C2 /* VideoReceiverViewRepresentable.swift in Sources */,
+				C28639682D808C60001D13C2 /* VideoViewRepresentable.swift in Sources */,
 				C28639712D80932E001D13C2 /* HomeView.swift in Sources */,
 				C2FEC0CB2D8481500064C5B6 /* WebSocketServer.swift in Sources */,
 				C286397C2D81A0A5001D13C2 /* ServerViewModel.swift in Sources */,
 				C286395E2D8081A7001D13C2 /* ContentView.swift in Sources */,
 				C28639782D819E76001D13C2 /* ServerView.swift in Sources */,
-				C28639562D8064DB001D13C2 /* VideoCapturerView.swift in Sources */,
 				C2ADD52F2D883D5F005614D4 /* Constants.swift in Sources */,
 				C28639762D80949C001D13C2 /* WebSocketClient.swift in Sources */,
-				C28639652D80895E001D13C2 /* VideoReceiver.swift in Sources */,
 				C286394B2D804E15001D13C2 /* VideoStreamerApp.swift in Sources */,
-				C28639582D806565001D13C2 /* VideoCapturerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
