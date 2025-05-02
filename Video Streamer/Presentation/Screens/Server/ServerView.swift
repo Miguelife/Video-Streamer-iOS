@@ -39,7 +39,7 @@ struct ServerView: View {
     @ViewBuilder
     func successBody() -> some View {
         ZStack(alignment: .bottom) {
-            VideoPreviewViewRepresentable(captureSession: viewModel.captureSession)
+            VideoPreviewViewRepresentable(localVideoView: viewModel.getLocalView())
                 .ignoresSafeArea(edges: [.horizontal, .bottom])
 
             serverRunningLabel()

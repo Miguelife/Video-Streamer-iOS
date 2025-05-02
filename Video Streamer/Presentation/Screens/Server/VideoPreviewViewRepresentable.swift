@@ -8,26 +8,14 @@
 import AVFoundation
 import SwiftUI
 import UIKit
+import WebRTC
 
 struct VideoPreviewViewRepresentable: UIViewRepresentable {
-    let captureSession: AVCaptureSession
+    let localVideoView: RTCMTLVideoView
 
     func makeUIView(context: Context) -> UIView {
-        let view = VideoPreview()
-        view.videoPreviewLayer.session = captureSession
-        view.videoPreviewLayer.videoGravity = .resizeAspectFill
-        return view
+        return localVideoView
     }
 
     func updateUIView(_ uiView: UIView, context: Context) {}
-
-    class VideoPreview: UIView {
-        override class var layerClass: AnyClass {
-            return AVCaptureVideoPreviewLayer.self
-        }
-
-        var videoPreviewLayer: AVCaptureVideoPreviewLayer {
-            return layer as! AVCaptureVideoPreviewLayer
-        }
-    }
 }

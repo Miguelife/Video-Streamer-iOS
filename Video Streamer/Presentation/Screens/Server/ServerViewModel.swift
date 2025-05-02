@@ -7,7 +7,7 @@
 
 import AVFoundation
 import SwiftUI
-
+import WebRTC
 @Observable
 class ServerViewModel {
     // MARK: - Properties
@@ -24,7 +24,7 @@ class ServerViewModel {
     // MARK: - Methods
     func onAppear() {
         videoStreamer = WebRtcManager()
-        setupSession()
+        startStreaming()
         server.didReceiveConnection = { [weak self] items in
             let sdp = items.first(where: { $0.name == "sdp" })?.value
             print("RECIVED SDP \(sdp ?? "null")")
@@ -38,41 +38,6 @@ class ServerViewModel {
     }
 
     // MARK: - METHODS
-    private func setupSession() {
-        guard let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
-            status = .failure
-            return
-        }
-
-        do {
-            let videoInput = try AVCaptureDeviceInput(device: device)
-            captureSession.beginConfiguration()
-
-            if captureSession.canAddInput(videoInput) {
-                captureSession.addInput(videoInput)
-                videoDeviceInput = videoInput
-            }
-
-            if captureSession.canAddOutput(videoOutput) {
-                captureSession.addOutput(videoOutput)
-            }
-
-            captureSession.commitConfiguration()
-
-            DispatchQueue.global().async { [weak self] in
-                self?.captureSession.startRunning()
-
-                DispatchQueue.main.async { [weak self] in
-                    self?.status = .success
-                }
-            }
-
-            startStreaming()
-        } catch {
-            status = .failure
-        }
-    }
-
     private func startStreaming() {
         guard let streamerDevice = AVCaptureDevice.default(.builtInDualCamera, for: .video, position: .back) else {
             status = .failure
@@ -80,7 +45,12 @@ class ServerViewModel {
         }
 
         videoStreamer.startCapture(device: streamerDevice,
-                                   format: streamerDevice.formats.first!,
-                                   fps: 120)
+                                   format: streamerDevice.formats.last!,
+                                   fps: 30)
+        status = .success
+    }
+
+    func getLocalView() -> RTCMTLVideoView {
+        return videoStreamer.getLocalView()
     }
 }
