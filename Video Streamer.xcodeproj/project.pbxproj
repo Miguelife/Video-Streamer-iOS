@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C216265A2DD881BA007113CC /* BonjourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21626522DD881BA007113CC /* BonjourView.swift */; };
+		C216265B2DD881BA007113CC /* ClientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21626572DD881BA007113CC /* ClientViewModel.swift */; };
+		C216265C2DD881BA007113CC /* BonjourViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21626532DD881BA007113CC /* BonjourViewModel.swift */; };
+		C216265D2DD881BA007113CC /* ClientBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21626552DD881BA007113CC /* ClientBuilder.swift */; };
+		C216265F2DD881BA007113CC /* ClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21626562DD881BA007113CC /* ClientView.swift */; };
+		C21626612DD887DB007113CC /* VideoOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21626602DD887D6007113CC /* VideoOutput.swift */; };
 		C286394B2D804E15001D13C2 /* VideoStreamerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639482D804E15001D13C2 /* VideoStreamerApp.swift */; };
 		C286394C2D804E15001D13C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28639442D804E15001D13C2 /* Preview Assets.xcassets */; };
 		C286394D2D804E15001D13C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28639462D804E15001D13C2 /* Assets.xcassets */; };
-		C28639512D804E7D001D13C2 /* VideoStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639502D804E74001D13C2 /* VideoStreamer.swift */; };
-		C286395C2D806917001D13C2 /* VideoPreviewViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286395B2D8068CE001D13C2 /* VideoPreviewViewRepresentable.swift */; };
 		C286395E2D8081A7001D13C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286395D2D8081A2001D13C2 /* ContentView.swift */; };
 		C28639632D8083DD001D13C2 /* WebRTC in Frameworks */ = {isa = PBXBuildFile; productRef = C28639622D8083DD001D13C2 /* WebRTC */; };
-		C28639682D808C60001D13C2 /* VideoViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639672D808C57001D13C2 /* VideoViewRepresentable.swift */; };
-		C286396A2D808CC5001D13C2 /* VideoReceiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639692D808CC0001D13C2 /* VideoReceiverView.swift */; };
-		C286396C2D808CCE001D13C2 /* VideoReceiverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286396B2D808CC8001D13C2 /* VideoReceiverViewModel.swift */; };
 		C28639712D80932E001D13C2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639702D809327001D13C2 /* HomeView.swift */; };
-		C28639762D80949C001D13C2 /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639752D809495001D13C2 /* WebSocketClient.swift */; };
 		C28639782D819E76001D13C2 /* ServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639772D819E6F001D13C2 /* ServerView.swift */; };
 		C286397C2D81A0A5001D13C2 /* ServerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286397B2D81A09F001D13C2 /* ServerViewModel.swift */; };
 		C286397E2D81AEDD001D13C2 /* HttpServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286397D2D81AED5001D13C2 /* HttpServer.swift */; };
@@ -35,41 +35,29 @@
 		C286399C2D81B0D4001D13C2 /* _NIOConcurrency in Frameworks */ = {isa = PBXBuildFile; productRef = C286399B2D81B0D4001D13C2 /* _NIOConcurrency */; };
 		C286399E2D81B0D4001D13C2 /* _NIOFileSystem in Frameworks */ = {isa = PBXBuildFile; productRef = C286399D2D81B0D4001D13C2 /* _NIOFileSystem */; };
 		C28639A02D81B0D4001D13C2 /* _NIOFileSystemFoundationCompat in Frameworks */ = {isa = PBXBuildFile; productRef = C286399F2D81B0D4001D13C2 /* _NIOFileSystemFoundationCompat */; };
-		C28639A52D81E476001D13C2 /* ClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639A42D81E476001D13C2 /* ClientView.swift */; };
-		C28639A62D81E476001D13C2 /* ClientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28639A32D81E476001D13C2 /* ClientViewModel.swift */; };
 		C2ADD52F2D883D5F005614D4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ADD52E2D883D5B005614D4 /* Constants.swift */; };
 		C2ADD6952D82F486007992A5 /* HttpExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ADD6942D82F480007992A5 /* HttpExplorer.swift */; };
-		C2E8A97F2DA96AF2008B49E8 /* WebRrtcManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E8A97E2DA96AF2008B49E8 /* WebRrtcManager.swift */; };
-		C2F70E8D2D8DAD670092C85C /* VideoReceiverBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F70E8C2D8DAD610092C85C /* VideoReceiverBuilder.swift */; };
-		C2FADF132D88636C008A9D9C /* VideoReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FADF122D886363008A9D9C /* VideoReceiver.swift */; };
-		C2FEC0CB2D8481500064C5B6 /* WebSocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FEC0CA2D84814A0064C5B6 /* WebSocketServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C21626522DD881BA007113CC /* BonjourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonjourView.swift; sourceTree = "<group>"; };
+		C21626532DD881BA007113CC /* BonjourViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonjourViewModel.swift; sourceTree = "<group>"; };
+		C21626552DD881BA007113CC /* ClientBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientBuilder.swift; sourceTree = "<group>"; };
+		C21626562DD881BA007113CC /* ClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientView.swift; sourceTree = "<group>"; };
+		C21626572DD881BA007113CC /* ClientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewModel.swift; sourceTree = "<group>"; };
+		C21626602DD887D6007113CC /* VideoOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoOutput.swift; sourceTree = "<group>"; };
 		C28639262D804CAC001D13C2 /* Video Streamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Video Streamer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28639442D804E15001D13C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C28639462D804E15001D13C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C28639482D804E15001D13C2 /* VideoStreamerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamerApp.swift; sourceTree = "<group>"; };
-		C28639502D804E74001D13C2 /* VideoStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamer.swift; sourceTree = "<group>"; };
-		C286395B2D8068CE001D13C2 /* VideoPreviewViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewViewRepresentable.swift; sourceTree = "<group>"; };
 		C286395D2D8081A2001D13C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C28639672D808C57001D13C2 /* VideoViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewRepresentable.swift; sourceTree = "<group>"; };
-		C28639692D808CC0001D13C2 /* VideoReceiverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReceiverView.swift; sourceTree = "<group>"; };
-		C286396B2D808CC8001D13C2 /* VideoReceiverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReceiverViewModel.swift; sourceTree = "<group>"; };
 		C28639702D809327001D13C2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		C28639752D809495001D13C2 /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
 		C28639772D819E6F001D13C2 /* ServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerView.swift; sourceTree = "<group>"; };
 		C286397B2D81A09F001D13C2 /* ServerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerViewModel.swift; sourceTree = "<group>"; };
 		C286397D2D81AED5001D13C2 /* HttpServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpServer.swift; sourceTree = "<group>"; };
-		C28639A32D81E476001D13C2 /* ClientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewModel.swift; sourceTree = "<group>"; };
-		C28639A42D81E476001D13C2 /* ClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientView.swift; sourceTree = "<group>"; };
 		C290FDE52D8420AD0080732C /* Video-Streamer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Video-Streamer-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C2ADD52E2D883D5B005614D4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C2ADD6942D82F480007992A5 /* HttpExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpExplorer.swift; sourceTree = "<group>"; };
-		C2E8A97E2DA96AF2008B49E8 /* WebRrtcManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRrtcManager.swift; sourceTree = "<group>"; };
-		C2F70E8C2D8DAD610092C85C /* VideoReceiverBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReceiverBuilder.swift; sourceTree = "<group>"; };
-		C2FADF122D886363008A9D9C /* VideoReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReceiver.swift; sourceTree = "<group>"; };
-		C2FEC0CA2D84814A0064C5B6 /* WebSocketServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +85,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C21626542DD881BA007113CC /* Bonjour */ = {
+			isa = PBXGroup;
+			children = (
+				C21626522DD881BA007113CC /* BonjourView.swift */,
+				C21626532DD881BA007113CC /* BonjourViewModel.swift */,
+			);
+			path = Bonjour;
+			sourceTree = "<group>";
+		};
+		C21626592DD881BA007113CC /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				C21626552DD881BA007113CC /* ClientBuilder.swift */,
+				C21626562DD881BA007113CC /* ClientView.swift */,
+				C21626572DD881BA007113CC /* ClientViewModel.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
 		C286391D2D804CAC001D13C2 = {
 			isa = PBXGroup;
 			children = (
@@ -125,10 +132,11 @@
 		C28639422D804E15001D13C2 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				C21626542DD881BA007113CC /* Bonjour */,
+				C21626592DD881BA007113CC /* Client */,
 				C286396D2D8092FA001D13C2 /* Home */,
 				C286396F2D80930F001D13C2 /* Server */,
 				C286396E2D809306001D13C2 /* Client */,
-				C28639662D808969001D13C2 /* VideoReceiver */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -166,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				C2ADD52D2D883D4F005614D4 /* Constants */,
-				C2FEC0C92D8481300064C5B6 /* Legacy */,
 				C286394F2D804E34001D13C2 /* Utils */,
 			);
 			path = Core;
@@ -175,24 +182,11 @@
 		C286394F2D804E34001D13C2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				C2E8A97E2DA96AF2008B49E8 /* WebRrtcManager.swift */,
-				C2ADD6942D82F480007992A5 /* HttpExplorer.swift */,
+				C21626602DD887D6007113CC /* VideoOutput.swift */,
 				C286397D2D81AED5001D13C2 /* HttpServer.swift */,
-				C2FADF122D886363008A9D9C /* VideoReceiver.swift */,
-				C28639502D804E74001D13C2 /* VideoStreamer.swift */,
+				C2ADD6942D82F480007992A5 /* HttpExplorer.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		C28639662D808969001D13C2 /* VideoReceiver */ = {
-			isa = PBXGroup;
-			children = (
-				C2F70E8C2D8DAD610092C85C /* VideoReceiverBuilder.swift */,
-				C286396B2D808CC8001D13C2 /* VideoReceiverViewModel.swift */,
-				C28639692D808CC0001D13C2 /* VideoReceiverView.swift */,
-				C28639672D808C57001D13C2 /* VideoViewRepresentable.swift */,
-			);
-			path = VideoReceiver;
 			sourceTree = "<group>";
 		};
 		C286396D2D8092FA001D13C2 /* Home */ = {
@@ -206,8 +200,6 @@
 		C286396E2D809306001D13C2 /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				C28639A32D81E476001D13C2 /* ClientViewModel.swift */,
-				C28639A42D81E476001D13C2 /* ClientView.swift */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -215,7 +207,6 @@
 		C286396F2D80930F001D13C2 /* Server */ = {
 			isa = PBXGroup;
 			children = (
-				C286395B2D8068CE001D13C2 /* VideoPreviewViewRepresentable.swift */,
 				C286397B2D81A09F001D13C2 /* ServerViewModel.swift */,
 				C28639772D819E6F001D13C2 /* ServerView.swift */,
 			);
@@ -228,15 +219,6 @@
 				C2ADD52E2D883D5B005614D4 /* Constants.swift */,
 			);
 			path = Constants;
-			sourceTree = "<group>";
-		};
-		C2FEC0C92D8481300064C5B6 /* Legacy */ = {
-			isa = PBXGroup;
-			children = (
-				C2FEC0CA2D84814A0064C5B6 /* WebSocketServer.swift */,
-				C28639752D809495001D13C2 /* WebSocketClient.swift */,
-			);
-			path = Legacy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,25 +312,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C286396A2D808CC5001D13C2 /* VideoReceiverView.swift in Sources */,
+				C21626612DD887DB007113CC /* VideoOutput.swift in Sources */,
 				C286397E2D81AEDD001D13C2 /* HttpServer.swift in Sources */,
 				C2ADD6952D82F486007992A5 /* HttpExplorer.swift in Sources */,
-				C2FADF132D88636C008A9D9C /* VideoReceiver.swift in Sources */,
-				C2F70E8D2D8DAD670092C85C /* VideoReceiverBuilder.swift in Sources */,
-				C286395C2D806917001D13C2 /* VideoPreviewViewRepresentable.swift in Sources */,
-				C28639512D804E7D001D13C2 /* VideoStreamer.swift in Sources */,
-				C2E8A97F2DA96AF2008B49E8 /* WebRrtcManager.swift in Sources */,
-				C28639A52D81E476001D13C2 /* ClientView.swift in Sources */,
-				C28639A62D81E476001D13C2 /* ClientViewModel.swift in Sources */,
-				C286396C2D808CCE001D13C2 /* VideoReceiverViewModel.swift in Sources */,
-				C28639682D808C60001D13C2 /* VideoViewRepresentable.swift in Sources */,
 				C28639712D80932E001D13C2 /* HomeView.swift in Sources */,
-				C2FEC0CB2D8481500064C5B6 /* WebSocketServer.swift in Sources */,
+				C216265A2DD881BA007113CC /* BonjourView.swift in Sources */,
+				C216265B2DD881BA007113CC /* ClientViewModel.swift in Sources */,
+				C216265C2DD881BA007113CC /* BonjourViewModel.swift in Sources */,
+				C216265D2DD881BA007113CC /* ClientBuilder.swift in Sources */,
+				C216265F2DD881BA007113CC /* ClientView.swift in Sources */,
 				C286397C2D81A0A5001D13C2 /* ServerViewModel.swift in Sources */,
 				C286395E2D8081A7001D13C2 /* ContentView.swift in Sources */,
 				C28639782D819E76001D13C2 /* ServerView.swift in Sources */,
 				C2ADD52F2D883D5F005614D4 /* Constants.swift in Sources */,
-				C28639762D80949C001D13C2 /* WebSocketClient.swift in Sources */,
 				C286394B2D804E15001D13C2 /* VideoStreamerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

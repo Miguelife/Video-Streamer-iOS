@@ -1,32 +1,11 @@
-//
-//  TextSenderViewModel.swift
-//  Video Streamer
-//
-//  Created by Miguel Ángel Soto González on 12/3/25.
-//
-
 import SwiftUI
+import WebRTC
 
 @Observable
 class ClientViewModel {
-    // MARK: - Properties
-    private var explorer = HttpExplorer(serviceType: Constants.serviceType)
-    var services = [NetService]()
+    let service: NetService
 
-    // MARK: - Methods
-    func exploreNetwork() {
-        explorer.start()
-
-        explorer.didFoundService = { [weak self] service in
-            guard let self else { return }
-            services.append(service)
-        }
-
-        explorer.didLostService = { [weak self] service in
-            guard let self else { return }
-            services.removeAll { netService in
-                netService.name == service.name
-            }
-        }
+    init(service: NetService) {
+        self.service = service
     }
 }

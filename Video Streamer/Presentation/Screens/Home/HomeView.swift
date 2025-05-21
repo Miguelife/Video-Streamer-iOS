@@ -27,12 +27,12 @@ struct HomeView: View {
 
             // MARK: - NAVIGATION
             .navigationDestination(for: NetService.self, destination: { service in
-                VideoReceiverBuilder().build(for: service)
+                ClientBuilder().build(for: service)
             })
             .navigationDestination(for: String.self) { destination in
                 switch destination {
                     case "client":
-                        ClientView()
+                        BonjourView()
                     case "server":
                         ServerView()
                     default:
