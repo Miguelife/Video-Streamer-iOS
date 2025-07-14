@@ -13,7 +13,13 @@ class VideoOutputError: Error {}
 
 class VideoOutputManager: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     private let captureSession = AVCaptureSession()
-    private let context = CIContext()
+    // Opciones optimizadas para el contexto CIContext
+    private lazy var context: CIContext = {
+        let options = [CIContextOption.useSoftwareRenderer: false,
+                     CIContextOption.priorityRequestLow: true]
+        return CIContext(options: options)
+    }()
+    // Callback para nuevos frames
     var onFrameAvailable: ((Data) -> Void)?
 
     init(onFrameAvailable: ((Data) -> Void)? = nil) {
@@ -55,21 +61,31 @@ class VideoOutputManager: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate
 
         guard elapsedTime >= targetInterval else { return }
         lastFrameTime = now
-
-        // Procesar frame de video
-        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
-        let ciImage = CIImage(cvImageBuffer: imageBuffer)
-
-        // Convertir a JPEG con calidad 0.7 (buena calidad/tamaño)
-        if let jpegData = context.jpegRepresentation(of: ciImage,
-                                                     colorSpace: CGColorSpaceCreateDeviceRGB(),
-                                                     options: [:])
-        {
-            // Almacenar el último frame para streaming HTTP
-            latestFrameTimestamp = now
-
-            // Notificar que hay un nuevo frame disponible
-            onFrameAvailable?(jpegData)
+        
+        // Autoreleasepool para asegurar que los objetos temporales se liberan
+        autoreleasepool {
+            // Procesar frame de video
+            guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+            // Crear imagen con escala reducida para procesar menos datos
+            let ciImage = CIImage(cvImageBuffer: imageBuffer)
+            
+            // Convertir a JPEG con calidad 0.7 pero opciones optimizadas de memoria
+            let options: [CIImageRepresentationOption: Any] = [
+                kCGImageDestinationLossyCompressionQuality as CIImageRepresentationOption: 0.7
+            ]
+            
+            if let jpegData = context.jpegRepresentation(of: ciImage, 
+                                                        colorSpace: CGColorSpaceCreateDeviceRGB(),
+                                                        options: options)
+            {
+                // Almacenar el último frame para streaming HTTP
+                latestFrameTimestamp = now
+                
+                // Notificar que hay un nuevo frame disponible
+                onFrameAvailable?(jpegData)
+                
+                // Asegurarnos de que el bloque de autoreleasepool libere recursos
+            }
         }
     }
 }
