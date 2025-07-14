@@ -20,7 +20,7 @@ class VideoOutputManager: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate
         self.onFrameAvailable = onFrameAvailable
     }
 
-    func startStreaming() throws {        
+    func startStreaming() throws {
         captureSession.sessionPreset = .hd4K3840x2160
         guard let streamerDevice = AVCaptureDevice.default(.builtInDualCamera, for: .video, position: .back),
               let inputDevice = try? AVCaptureDeviceInput(device: streamerDevice)
@@ -34,37 +34,40 @@ class VideoOutputManager: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate
         output.setSampleBufferDelegate(self, queue: DispatchQueue(label: "cameraQueue"))
         captureSession.addOutput(output)
 
-        captureSession.startRunning()
+        DispatchQueue.global().async { [weak self] in
+            self?.captureSession.startRunning()
+        }
     }
-    
+
     func stopStreaming() {
         captureSession.stopRunning()
     }
 
     // Para streaming de video
-    private let frameRateLimit: Double = 15.0 // Frames por segundo máximos
+    private let frameRateLimit: Double = 60.0 // Frames por segundo máximos
     private var lastFrameTime = Date()
-    private(set) var latestFrameTimestamp: Date = Date()
+    private(set) var latestFrameTimestamp: Date = .init()
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         // Control de frecuencia de frames para no saturar la red
         let now = Date()
         let elapsedTime = now.timeIntervalSince(lastFrameTime)
         let targetInterval = 1.0 / frameRateLimit
-        
+
         guard elapsedTime >= targetInterval else { return }
         lastFrameTime = now
-        
+
         // Procesar frame de video
         guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         let ciImage = CIImage(cvImageBuffer: imageBuffer)
-        
+
         // Convertir a JPEG con calidad 0.7 (buena calidad/tamaño)
-        if let jpegData = context.jpegRepresentation(of: ciImage, 
-                                                     colorSpace: CGColorSpaceCreateDeviceRGB(), 
-                                                     options: [:]) {
+        if let jpegData = context.jpegRepresentation(of: ciImage,
+                                                     colorSpace: CGColorSpaceCreateDeviceRGB(),
+                                                     options: [:])
+        {
             // Almacenar el último frame para streaming HTTP
-            self.latestFrameTimestamp = now
-            
+            latestFrameTimestamp = now
+
             // Notificar que hay un nuevo frame disponible
             onFrameAvailable?(jpegData)
         }

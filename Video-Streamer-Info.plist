@@ -4,6 +4,7 @@
 <dict>
 	<key>NSBonjourServices</key>
 	<array>
+		<string>_http._udp.</string>
 		<string>_http._tcp.</string>
 		<string>_voidstreamer._tcp.</string>
 	</array>

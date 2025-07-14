@@ -39,6 +39,12 @@ struct HomeView: View {
                         fatalError("Unsupported destination: \(destination)")
                 }
             }
+            .onAppear {
+                print("On Appear")
+            }
+            .task {
+                print("Task")
+            }
         }
     }
 }
